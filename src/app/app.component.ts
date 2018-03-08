@@ -21,16 +21,15 @@ export class MyApp {
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    private _tokenService: Angular2TokenService
+    private _tokenService: Angular2TokenService,
+    private alertCtrl: AlertController
   ) {
     this._tokenService.init({
-      apiBase: 'https://your-cooper-api.herokuapp.com/api/v1'
+      apiBase: 'https://dala-cooper-api.herokuapp.com/api/v1'
     });
   
-    
-
     this.initializeApp();
-
+  
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
