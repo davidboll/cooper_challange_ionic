@@ -8,18 +8,19 @@ import { PerfomanceDataProvider } from '../../providers/perfomance-data/perfoman
   templateUrl: 'home.html'
 })
 export class HomePage {
-  user: any = {};
+  distance: number = 1000;
 
   constructor(
     public navCtrl: NavController,
     public person: PersonProvider,
     public perfomanceData: PerfomanceDataProvider
   ) {
-    this.user = { distance: 1000, age: 20, gender: 'female' };
+    this.person.age = 20;
+    this.person.gender = 'female';
   }
   
-  calculate(user) {
-    this.person.doAssessment(user.distance);
+  calculate() {
+    this.person.doAssessment(this.distance);
     this.perfomanceData
       .saveData({ performance_data: { data: { message: this.person.assessmentMessage } } })
       .subscribe(data => console.log(data));
