@@ -14,11 +14,13 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-data';
+import { ResultsPage } from '../pages/results/results';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ResultsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ResultsPage
   ],
   providers: [
     StatusBar,

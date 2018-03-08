@@ -9,4 +9,10 @@ export class PerfomanceDataProvider {
   saveData(data) {
     return this._tokenService.post('perfomance_data', data).map(data => data);
   }
+
+  getResults() {
+    return this._tokenService
+      .get('performance_data')
+      .map(results => results.json());
+  }
 }
