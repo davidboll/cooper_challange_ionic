@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { PerfomanceDataProvider } from '../../providers/perfomance-data/perfomance-data'
 
 @Component({
@@ -18,6 +18,7 @@ export class ResultsPage {
   constructor(
     private performanceData: PerfomanceDataProvider,
     public navCtrl: NavController,
+    private viewCtrl: ViewController,
     public navParams: NavParams,
   ) {}
 
@@ -62,4 +63,10 @@ chartClicked(event: any): void {
 chartHovered(event: any): void {
   console.log(event);
 }
+
+
+dismissModal() {
+    this.viewCtrl.dismiss();
+}
+
 }
