@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>all-green</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <audio id="player" src="assets/audio/heaven-is-a-place-on-earth.mp3"></audio>
+<div>
+    <button ion-button icon-only large onclick="document.getElementById('player').play()">
+      <ion-icon name="play"></ion-icon>
+    </button>
+    <button ion-button icon-only large onclick="document.getElementById('player').pause()">
+      <ion-icon name="pause"></ion-icon>
+    </button>
+    <!-- <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button> -->
+</div>
+</ion-content>

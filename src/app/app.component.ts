@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { Angular2TokenService } from 'angular2-token';
 import { ResultsPage } from '../pages/results/results';
+import { AllGreenPage } from '../pages/all-green/all-green';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,6 +36,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
+      { title: 'All green', component: AllGreenPage },
       
     ];
 

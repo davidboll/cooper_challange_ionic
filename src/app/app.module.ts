@@ -15,13 +15,16 @@ import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-data';
 import { ResultsPage } from '../pages/results/results';
+import { AllGreenPage } from '../pages/all-green/all-green';
+
 import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ResultsPage
+    ResultsPage,
+    AllGreenPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { ChartsModule } from 'ng2-charts';
   entryComponents: [
     MyApp,
     HomePage,
-    ResultsPage
+    ResultsPage,
+    AllGreenPage
   ],
   providers: [
     StatusBar,
